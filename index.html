@@ -90,6 +90,22 @@ h2{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:500;max-width:16ch}
 #ov h2{font-size:clamp(2.6rem,7vw,5.5rem);max-width:none}#ov h3{font-size:1.5rem;margin:48px 0 14px}#ov li{margin:0 0 8px 20px;color:var(--mute)}
 #x{position:fixed;top:calc(18px + env(safe-area-inset-top,0px));right:6vw;background:var(--bg);border:1px solid var(--line);color:var(--fg);border-radius:99px;padding:8px 18px;cursor:pointer;font:inherit;z-index:2}
 .cvs{display:grid;gap:14px;margin-top:40px}.cvs>div{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--bg2)}#ov .cvs h3{margin-top:0}.cvs .btn{border:0;cursor:pointer;font:600 1rem "Hanken Grotesk"}
+
+h1{font-size:clamp(3rem,9vw,8.5rem)!important;max-width:13ch!important;line-height:.98}
+.cue{position:absolute;right:6vw;bottom:5vh;color:var(--mute);animation:bob 2s infinite}@keyframes bob{50%{transform:translateY(7px)}}
+.ix{list-style:none;padding:0;margin-top:30px}.ix a{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .3s,color .3s}
+.ix a:hover{padding-left:18px;color:var(--ac)}.ix b{font:500 clamp(1.3rem,3vw,2rem) "Bricolage Grotesque"}.ix span{color:var(--mute);align-self:center}
+.pinsec{height:340vh;padding:0}.stick{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center;padding:84px 6vw 0}
+#sh{font-size:clamp(1.9rem,5vw,3.6rem);font-weight:500;max-width:18ch;min-height:2.1em}
+.chain{display:flex;flex-direction:column;align-items:center}
+.st{width:150px;height:50px;display:grid;place-items:center;border:1px solid var(--line);border-radius:14px;background:var(--bg2);font:500 1.15rem "Bricolage Grotesque",sans-serif;opacity:.3;transition:opacity .5s,border-color .5s,width .9s cubic-bezier(.2,.8,.2,1),height .9s cubic-bezier(.2,.8,.2,1),border-radius .9s,background .5s}
+.st.on{opacity:1;border-color:var(--ac)}.ln{width:2px;height:24px;background:var(--line);transition:background .5s}.ln.on{background:var(--ac)}
+#dbn{overflow:hidden;position:relative}#dbn.open{width:min(250px,64vw);height:min(300px,34vh);border-radius:36px;background:#0a0d13;color:#ece8e1}
+#dbn .lb{transition:opacity .3s}#dbn.open .lb{opacity:0}
+#dbn .pc{position:absolute;inset:0;padding:22px;display:flex;flex-direction:column;gap:10px;justify-content:center;text-align:left;opacity:0;transition:opacity .5s .5s}#dbn.open .pc{opacity:1}
+.pc b{font:500 2rem "Bricolage Grotesque",sans-serif}.pc span{background:#6fd6a0;color:#0a0d13;border-radius:99px;padding:6px 14px;font-size:.85rem;align-self:flex-start;font-weight:600}.pc small{color:#8d94a3}
+@media(prefers-reduced-motion:reduce){.pinsec{height:auto}.stick{position:static;height:auto;padding:14vh 6vw}}
+@media(max-width:800px){h1{font-size:clamp(3rem,15vw,5rem)!important}.ix a{grid-template-columns:1fr;gap:2px}}
 </style>
 </head>
 <body>
@@ -98,9 +114,12 @@ h2{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:500;max-width:16ch}
 
 <section id="hero"><canvas id="net"></canvas>
 <div class="wrap"><h1 id="h1" aria-label="I build the systems behind the screen.">I build the systems behind the screen.</h1>
-<p class="sub">Software, automation, AI and enterprise IT. I turn messy business processes into products people actually use.</p>
-<div class="now"><i class="dot"></i>Currently building SyncOps, a workforce attendance platform</div></div></section>
+<p class="sub">Software, automation, AI and enterprise IT. I turn complex business problems into software, systems and automation people actually use.</p>
+<div class="now"><i class="dot"></i>Currently building SyncOps, a workforce attendance platform</div></div><div class="cue">Scroll ↓</div></section>
 
+<section id="idx" style="padding-block:10vh"><div class="wrap"><h2 style="font-size:clamp(1.8rem,4vw,3rem)">Selected work</h2><ul class="ix">
+<li><a href="#work"><b>SyncOps</b><span>Workforce and attendance platform</span></a></li><li><a href="#tend"><b>Tend</b><span>Self-care mobile app</span></a></li><li><a href="#web"><b>Keniche</b><span>Business website</span></a></li><li><a href="#web"><b>Patamakao Housing</b><span>Housing management platform</span></a></li><li><a href="#web"><b>Rossy Fashion POS</b><span>Point of sale for fashion retail</span></a></li><li><a href="#web"><b>Industrial Stone</b><span>Industrial supply website</span></a></li><li><a href="#web"><b>Royan, Msafiri, HOG, Satii</b><span>More live websites below</span></a></li></ul></div></section>
+<section id="sys" class="pinsec"><div class="stick"><h2 id="sh">A person opens the app.</h2><div class="chain" aria-hidden="true"><div class="st" data-k="0">User</div><div class="ln" data-k="1"></div><div class="st" data-k="1">Mobile app</div><div class="ln" data-k="2"></div><div class="st" data-k="2">API</div><div class="ln" data-k="3"></div><div class="st" data-k="3" id="dbn"><span class="lb">Database</span><div class="pc"><small>Nairobi branch</small><b>SyncOps</b><span>Location verified</span></div></div></div></div></section>
 <section id="work"><div class="wrap split">
 <div><h2>SyncOps</h2><p class="lead">A workforce and attendance platform that verifies the right employee is at the right place at the right time. Mobile clock-in with GPS checks, branch and employee management, and role-based access on a real backend.</p>
 <div class="tags"><b>React Native / Expo</b><b>Node.js / Express</b><b>Supabase</b><b>PostgreSQL</b><b>Row Level Security</b></div>
@@ -113,7 +132,7 @@ h2{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:500;max-width:16ch}
 <div><h2>Tend</h2><p class="lead">A self-care app focused on gentle daily engagement. Different problem, different interface, same approach: make it simple to use and solid underneath.</p>
 <div class="tags"><b>Flutter</b><b>Dart</b><b>Mobile UI/UX</b></div><a class="btn" href="#/case/tend">Read the case study</a></div></div></section>
 
-<section><div class="wrap"><h2>Websites and web products</h2><p class="lead">Live sites for businesses across retail, travel, housing and industry. Click any card to open it.</p>
+<section id="web"><div class="wrap"><h2>Websites and web products</h2><p class="lead">Live sites for businesses across retail, travel, housing and industry. Click any card to open it.</p>
 <div class="grid" id="grid"></div></div></section>
 
 <section id="auto"><div class="wrap"><h2>I automate what happens behind the interface.</h2><p class="lead">Ticket routing, escalations, scheduled reports, PDF generation and email distribution, built with Monday.com, Google Apps Script, AppSheet and Python. The aim: make the repetitive invisible.</p>
@@ -218,6 +237,10 @@ function closeOv(){const y=scrollY;history.replaceState(null,'',location.pathnam
 $('#x').onclick=closeOv;addEventListener('keydown',e=>e.key=='Escape'&&!ov.hidden&&closeOv());addEventListener('hashchange',route);route();
 ob.addEventListener('click',async e=>{const b=e.target.closest('.dl');if(!b)return;const m=$('#dlmsg');try{const d=await claude.use('downloads');if(!d)throw 0;const bin=atob(CVS[b.dataset.k].split(',')[1]),u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);await d.save({filename:FN[b.dataset.k],data:new Blob([u],{type:'application/pdf'})});m.textContent='Saved.'}catch(x){m.textContent=x&&x.code=='declined'?'Download cancelled.':'Downloads are not available in this view. Email jmuuo001@gmail.com for a copy.'}});
 document.querySelectorAll('#ov').forEach(el=>el.addEventListener('pointerover',e=>{if(e.target.closest('a,button'))cur.classList.add('big');else cur.classList.remove('big')}));
+
+const sys=$('#sys'),ch=[...sys.querySelectorAll('[data-k]')],sh=$('#sh'),dbn=$('#dbn'),cap=['A person opens the app.','The app asks the API.','The API checks the database.','The data becomes a product.','That is SyncOps.'];
+function sp(){let k=4;if(!mq){const r=sys.getBoundingClientRect(),p=Math.max(0,Math.min(.999,-r.top/(r.height-innerHeight)));k=Math.floor(p*5)}ch.forEach(e=>e.classList.toggle('on',+e.dataset.k<=k));dbn.classList.toggle('open',k>=4);if(sh.textContent!=cap[k])sh.textContent=cap[k]}
+addEventListener('scroll',sp,{passive:true});sp();
 </script>
 </body>
 </html>
