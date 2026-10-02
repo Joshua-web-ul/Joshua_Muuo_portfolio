@@ -13,7 +13,7 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="light"]{--bg:#f3f1ec;--bg2:#e8e5de;--fg:#14161b;--mute:#5d6472;--line:#d2cec4;--ac:#2a55c9;--ac2:#b8570f}
 :root[data-theme="dark"]{--bg:#0d1016;--bg2:#141923;--fg:#ece8e1;--mute:#8d94a3;--line:#252c3a;--ac:#7fa8ff;--ac2:#ffb86b}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{background:var(--bg);color:var(--fg);font:400 17px/1.6 "Hanken Grotesk",system-ui,sans-serif;overflow-x:hidden}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.6 "Hanken Grotesk",system-ui,sans-serif}
 h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.02;letter-spacing:-.025em}
 a{color:inherit}section{padding:18vh 6vw;position:relative}
 .wrap{max-width:1180px;margin:0 auto}
@@ -38,7 +38,7 @@ h2{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:500;max-width:16ch}
 .map{flex:1;border-radius:20px;background:radial-gradient(circle at 50% 50%,#1d2a47,#0f1522);position:relative;overflow:hidden;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:28px 28px}
 .pin{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 0 #7fa8ff99;animation:ping 2s infinite}
 @keyframes ping{to{box-shadow:0 0 0 38px #7fa8ff00}}
-.clock{border:0;border-radius:99px;padding:15px;font:600 1rem "Hanken Grotesk";background:#7fa8ff;color:#0a0d13;cursor:pointer;transition:background .3s}
+.clock{border:0;border-radius:99px;padding:15px;font:600 1rem "Hanken Grotesk",system-ui,sans-serif;background:#7fa8ff;color:#0a0d13;cursor:pointer;transition:background .3s}
 .clock.on{background:#6fd6a0}
 .pipe{display:flex;flex-wrap:wrap;gap:10px;margin-top:70px;align-items:center}
 .pipe span{padding:10px 18px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}.pipe i{color:var(--mute);font-style:normal}
@@ -55,7 +55,7 @@ h2{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:500;max-width:16ch}
 #auto{background:var(--bg2)}
 .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:60px;position:relative}
 .node{padding:22px 16px;border:1px solid var(--line);border-radius:16px;background:var(--bg);opacity:.35;transition:all .5s}
-.node.on{opacity:1;border-color:var(--ac);transform:translateY(-8px)}.node b{display:block;font-family:"Bricolage Grotesque";font-size:1.25rem}.node span{font-size:.85rem;color:var(--mute)}
+.node.on{opacity:1;border-color:var(--ac);transform:translateY(-8px)}.node b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.25rem}.node span{font-size:.85rem;color:var(--mute)}
 .term{margin-top:50px;max-width:640px;border:1px solid var(--line);border-radius:18px;background:var(--bg2);padding:26px;min-height:300px;font-size:.98rem}
 .term q{display:block;color:var(--mute);quotes:none;margin-bottom:18px;min-height:3.2em}
 .term dl{display:grid;grid-template-columns:130px 1fr;gap:10px 14px}.term dt{color:var(--mute)}.term dd{font-weight:600;min-height:1.6em}
@@ -63,14 +63,14 @@ h2{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:500;max-width:16ch}
 .tl{margin-top:60px;border-left:2px solid var(--line);padding-left:34px;position:relative}
 .tl::after{content:"";position:absolute;left:-2px;top:0;width:2px;height:var(--p,0%);background:var(--ac)}
 .tl details{margin-bottom:26px;position:relative}.tl details::before{content:"";position:absolute;left:-41px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--ac)}
-.tl summary{cursor:pointer;list-style:none;font-family:"Bricolage Grotesque";font-size:1.5rem;font-weight:500}.tl summary small{display:block;font:400 .95rem "Hanken Grotesk";color:var(--mute)}
+.tl summary{cursor:pointer;list-style:none;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.5rem;font-weight:500}.tl summary small{display:block;font:400 .95rem "Hanken Grotesk",system-ui,sans-serif;color:var(--mute)}
 .tl ul{margin:12px 0 0 18px;color:var(--mute);max-width:60ch}
 .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:34px;margin-top:60px}
 .stack h3{font-size:1.3rem;margin-bottom:12px}.stack p{color:var(--mute)}
 .stack div{border-top:1px solid var(--line);padding-top:16px}
 #contact{min-height:90vh;display:flex;align-items:center}
 #contact h2{font-size:clamp(3rem,9vw,8rem);max-width:12ch}
-.mail{display:inline-block;margin-top:34px;font:500 clamp(1.4rem,3.4vw,2.6rem) "Bricolage Grotesque";text-decoration:none;border-bottom:2px solid var(--ac)}
+.mail{display:inline-block;margin-top:34px;font:500 clamp(1.4rem,3.4vw,2.6rem) "Bricolage Grotesque",system-ui,sans-serif;text-decoration:none;border-bottom:2px solid var(--ac)}
 .links{display:flex;gap:26px;margin-top:26px;color:var(--mute)}
 #cur{position:fixed;left:0;top:0;width:14px;height:14px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:99;transition:width .2s,height .2s,margin .2s}
 #cur.big{width:64px;height:64px;margin:-25px 0 0 -25px}
@@ -89,12 +89,12 @@ h2{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:500;max-width:16ch}
 #ov{position:fixed;inset:0;z-index:50;background:var(--bg);overflow:auto;padding:12vh 6vw 10vh}#ov[hidden]{display:none}.ovin{max-width:760px;margin:0 auto}
 #ov h2{font-size:clamp(2.6rem,7vw,5.5rem);max-width:none}#ov h3{font-size:1.5rem;margin:48px 0 14px}#ov li{margin:0 0 8px 20px;color:var(--mute)}
 #x{position:fixed;top:calc(18px + env(safe-area-inset-top,0px));right:6vw;background:var(--bg);border:1px solid var(--line);color:var(--fg);border-radius:99px;padding:8px 18px;cursor:pointer;font:inherit;z-index:2}
-.cvs{display:grid;gap:14px;margin-top:40px}.cvs>div{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--bg2)}#ov .cvs h3{margin-top:0}.cvs .btn{border:0;cursor:pointer;font:600 1rem "Hanken Grotesk"}
+.cvs{display:grid;gap:14px;margin-top:40px}.cvs>div{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--bg2)}#ov .cvs h3{margin-top:0}.cvs .btn{border:0;cursor:pointer;font:600 1rem "Hanken Grotesk",system-ui,sans-serif}
 
 h1{font-size:clamp(3rem,9vw,8.5rem)!important;max-width:13ch!important;line-height:.98}
 .cue{position:absolute;right:6vw;bottom:5vh;color:var(--mute);animation:bob 2s infinite}@keyframes bob{50%{transform:translateY(7px)}}
 .ix{list-style:none;padding:0;margin-top:30px}.ix a{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .3s,color .3s}
-.ix a:hover{padding-left:18px;color:var(--ac)}.ix b{font:500 clamp(1.3rem,3vw,2rem) "Bricolage Grotesque"}.ix span{color:var(--mute);align-self:center}
+.ix a:hover{padding-left:18px;color:var(--ac)}.ix b{font:500 clamp(1.3rem,3vw,2rem) "Bricolage Grotesque",system-ui,sans-serif}.ix span{color:var(--mute);align-self:center}
 .pinsec{height:340vh;padding:0}.stick{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center;padding:84px 6vw 0}
 #sh{font-size:clamp(1.9rem,5vw,3.6rem);font-weight:500;max-width:18ch;min-height:2.1em}
 .chain{display:flex;flex-direction:column;align-items:center}
@@ -115,7 +115,7 @@ nav{transition:transform .35s}
 #web .stick{align-items:stretch;justify-content:center;text-align:left;padding:84px 0 0}#web .wrap{width:100%;padding:0 6vw}
 #about .stack{margin-top:50px}.edu{margin-top:60px;border-top:1px solid var(--line);padding-top:24px;display:grid;gap:14px;max-width:60ch}.edu p{color:var(--mute)}.edu b{display:block;color:var(--fg);font:500 1.2rem "Bricolage Grotesque",sans-serif}
 @media(prefers-reduced-motion:reduce){.film{width:auto;overflow-x:auto}#web .pinsec,#web.pinsec{height:auto}#web .stick{padding:14vh 0}}
-</style>
+.stick{overflow:hidden}html{overflow-x:hidden;overflow-x:clip}.tphone{padding:26px 12px}.moods{gap:6px}.moods button{width:36px;height:36px;font-size:1.05rem}@media(max-width:400px){.moods button{width:32px;height:32px;font-size:.95rem}.pc b{font-size:1.7rem}}</style>
 </head>
 <body>
 <div id="cur"></div>
@@ -185,7 +185,7 @@ addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform
 document.querySelectorAll('a,button,summary').forEach(el=>{el.addEventListener('pointerenter',()=>cur.classList.add('big'));el.addEventListener('pointerleave',()=>cur.classList.remove('big'))});
 // headline type reacts to cursor
 const h=$('#h1');h.innerHTML=h.textContent.split(' ').map(w=>`<span>${w}</span>`).join(' ');const ws=[...h.children];
-addEventListener('pointermove',e=>{if(scrollY>innerHeight)return;ws.forEach(s=>{const r=s.getBoundingClientRect(),d=Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2));s.style.setProperty('--w',Math.max(0,100-d/4))})});
+addEventListener('pointermove',e=>{if(scrollY>innerHeight||!matchMedia('(hover:hover)').matches)return;ws.forEach(s=>{const r=s.getBoundingClientRect(),d=Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2));s.style.setProperty('--w',Math.max(0,100-d/4))})});
 // network: app -> api -> db -> automation -> ai -> people
 const cv=$('#net'),c=cv.getContext('2d');let W,H,N=[];
 const labels=['App','API','Database','Automation','AI','People'];
@@ -230,10 +230,10 @@ const O=['Flutter','Dart','Python','AI APIs','Apps Script','Monday.com','n8n','A
 const CE=[['Tend','Flutter'],['Tend','Dart'],['Triage','Python'],['Triage','AI APIs'],['Automation','Python'],['Automation','Apps Script'],['Automation','Monday.com'],['Automation','n8n'],['Automation','AppSheet'],['Node.js','Express'],['Supabase','PostgreSQL'],['Supabase','RLS'],['React Native','Expo'],['Flutter','Dart']];
 ['Supabase','PostgreSQL','RLS','Node.js','Express','TypeScript','React Native','Expo'].forEach(t=>CE.push(['SyncOps',t]));
 const mbq=matchMedia('(max-width:800px)'),vb=()=>{sv.setAttribute('viewBox',mbq.matches?'110 6 580 434':'0 0 800 440');cs.setAttribute('viewBox',mbq.matches?'-300 -250 600 500':'-330 -250 660 500')};const MA={Tend:15,Triage:60,Automation:120,SyncOps:260},cs=$('#const'),CN={},L=CE.map(([a,b])=>({a,b,el:mk('line',{class:'ce'},cs)}));let sel=null,off=0;
-O.forEach((n,i)=>CN[n]={r:200,a:i/O.length*360});Object.keys(I).forEach(n=>CN[n]={r:95,a:I[n],p:1});
+O.forEach((n,i)=>CN[n]={r:200,a:i/O.length*360,i});Object.keys(I).forEach(n=>CN[n]={r:95,a:I[n],p:1});
 function act(n){sel=n;const nb=new Set(n?[n]:[]);L.forEach(l=>{if(l.a==n||l.b==n){nb.add(l.a);nb.add(l.b)}});L.forEach(l=>l.el.style.opacity=!n?'':(l.a==n||l.b==n)?1:.05);Object.entries(CN).forEach(([k,o])=>o.g.style.opacity=!n||nb.has(k)?1:.2);$('#ccap').textContent=n?n+' connects to '+[...nb].filter(x=>x!=n).join(', ')+'.':'Hover or tap a tool to see what it connects to.'}
 Object.entries(CN).forEach(([n,o])=>{o.g=mk('g',{class:'cn'+(o.p?' pr':'')},cs);mk('circle',{r:o.p?7:4},o.g);o.n=n;o.t=mk('text',{},o.g);o.t.textContent=n;o.g.onpointerenter=o.g.onclick=()=>act(n);o.g.onpointerleave=e=>e.pointerType=='mouse'&&act(null)});
-function cf(){if(!sel&&!mq)off+=.04;Object.values(CN).forEach(o=>{const mb=mbq.matches,r=((mb&&o.p?MA[o.n]:o.a)+off)*Math.PI/180,rr=mb?(o.p?90:155):o.r;o.x=Math.cos(r)*rr;o.y=Math.sin(r)*rr;o.g.setAttribute('transform',`translate(${o.x},${o.y})`);o.t.setAttribute('x',o.p?0:(o.x>0?12:-12));o.t.setAttribute('y',o.p?(mbq.matches?30:22):4);o.t.setAttribute('text-anchor',o.p?'middle':(o.x>0?'start':'end'))});L.forEach(l=>{const a=CN[l.a],b=CN[l.b];l.el.setAttribute('x1',a.x);l.el.setAttribute('y1',a.y);l.el.setAttribute('x2',b.x);l.el.setAttribute('y2',b.y)});requestAnimationFrame(cf)}vb();mbq.addEventListener('change',vb);act(null);cf();
+function cf(){if(!sel&&!mq)off+=.04;Object.values(CN).forEach(o=>{const mb=mbq.matches,r=((mb&&o.p?MA[o.n]:o.a)+off)*Math.PI/180,rr=mb?(o.p?90:(o.i%2?130:168)):o.r;o.x=Math.cos(r)*rr;o.y=Math.sin(r)*rr;o.g.setAttribute('transform',`translate(${o.x},${o.y})`);o.t.setAttribute('x',o.p?0:(o.x>0?12:-12));o.t.setAttribute('y',o.p?(mbq.matches?30:22):4);o.t.setAttribute('text-anchor',o.p?'middle':(o.x>0?'start':'end'))});L.forEach(l=>{const a=CN[l.a],b=CN[l.b];l.el.setAttribute('x1',a.x);l.el.setAttribute('y1',a.y);l.el.setAttribute('x2',b.x);l.el.setAttribute('y2',b.y)});requestAnimationFrame(cf)}vb();mbq.addEventListener('change',vb);act(null);cf();
 // case studies and CV
 const CS={
 syncops:{t:'SyncOps',s:'Workforce and attendance management platform. In development.',p:'Attendance only means something if it is verified. SyncOps checks who is clocking in and where, and gives managers one place to see it.',f:['Employee','Authentication','GPS check','Attendance session','PostgreSQL','Management view'],b:['Mobile app workflows for employee sign-in, attendance, branch management, GPS verification and clock-in and clock-out.','Backend APIs and database design covering employees, branches, attendance sessions, authentication and role-based access.','HR and management workflows for employee management, branch assignment, attendance monitoring and reporting.','Supabase authentication, PostgreSQL data structures, Row Level Security and app-to-backend synchronisation.','Cloud deployment on platforms including Railway and Vercel.'],k:['TypeScript','React Native','Expo','Node.js','Express','Supabase','PostgreSQL','GPS'],n:'Leave management, team structures, branch managers and team leader assignments.'},
