@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -106,6 +106,15 @@ h1{font-size:clamp(3rem,9vw,8.5rem)!important;max-width:13ch!important;line-heig
 .pc b{font:500 2rem "Bricolage Grotesque",sans-serif}.pc span{background:#6fd6a0;color:#0a0d13;border-radius:99px;padding:6px 14px;font-size:.85rem;align-self:flex-start;font-weight:600}.pc small{color:#8d94a3}
 @media(prefers-reduced-motion:reduce){.pinsec{height:auto}.stick{position:static;height:auto;padding:14vh 6vw}}
 @media(max-width:800px){h1{font-size:clamp(3rem,15vw,5rem)!important}.ix a{grid-template-columns:1fr;gap:2px}}
+
+nav{transition:transform .35s}
+#phil .stick{gap:30px}.pwrap{display:grid;justify-items:center}.pwrap h2{grid-area:1/1;max-width:15ch;font-size:clamp(2.4rem,7vw,6rem)}.pwrap span{display:inline-block;will-change:transform}
+#pl{opacity:0;max-width:44ch}
+.film{display:flex;gap:16px;padding:0 6vw;margin-top:34px;will-change:transform;width:max-content}
+.film .card{flex:0 0 min(78vw,430px);min-height:min(44vh,360px)}.film .shot{height:min(20vh,170px)}#web h2{font-size:clamp(2rem,4.5vw,3.6rem);max-width:none}#web .stick{padding-top:90px}
+#web .stick{align-items:stretch;justify-content:center;text-align:left;padding:84px 0 0}#web .wrap{width:100%;padding:0 6vw}
+#about .stack{margin-top:50px}.edu{margin-top:60px;border-top:1px solid var(--line);padding-top:24px;display:grid;gap:14px;max-width:60ch}.edu p{color:var(--mute)}.edu b{display:block;color:var(--fg);font:500 1.2rem "Bricolage Grotesque",sans-serif}
+@media(prefers-reduced-motion:reduce){.film{width:auto;overflow-x:auto}#web .pinsec,#web.pinsec{height:auto}#web .stick{padding:14vh 0}}
 </style>
 </head>
 <body>
@@ -119,6 +128,7 @@ h1{font-size:clamp(3rem,9vw,8.5rem)!important;max-width:13ch!important;line-heig
 
 <section id="idx" style="padding-block:10vh"><div class="wrap"><h2 style="font-size:clamp(1.8rem,4vw,3rem)">Selected work</h2><ul class="ix">
 <li><a href="#work"><b>SyncOps</b><span>Workforce and attendance platform</span></a></li><li><a href="#tend"><b>Tend</b><span>Self-care mobile app</span></a></li><li><a href="#web"><b>Keniche</b><span>Business website</span></a></li><li><a href="#web"><b>Patamakao Housing</b><span>Housing management platform</span></a></li><li><a href="#web"><b>Rossy Fashion POS</b><span>Point of sale for fashion retail</span></a></li><li><a href="#web"><b>Industrial Stone</b><span>Industrial supply website</span></a></li><li><a href="#web"><b>Royan, Msafiri, HOG, Satii</b><span>More live websites below</span></a></li></ul></div></section>
+<section id="phil" class="pinsec" style="height:280vh"><div class="stick"><div class="pwrap"><h2 id="pa"></h2><h2 id="pb"></h2></div><p class="lead" id="pl">I turn complex problems into software, systems and automation people actually use.</p></div></section>
 <section id="sys" class="pinsec"><div class="stick"><h2 id="sh">A person opens the app.</h2><div class="chain" aria-hidden="true"><div class="st" data-k="0">User</div><div class="ln" data-k="1"></div><div class="st" data-k="1">Mobile app</div><div class="ln" data-k="2"></div><div class="st" data-k="2">API</div><div class="ln" data-k="3"></div><div class="st" data-k="3" id="dbn"><span class="lb">Database</span><div class="pc"><small>Nairobi branch</small><b>SyncOps</b><span>Location verified</span></div></div></div></div></section>
 <section id="work"><div class="wrap split">
 <div><h2>SyncOps</h2><p class="lead">A workforce and attendance platform that verifies the right employee is at the right place at the right time. Mobile clock-in with GPS checks, branch and employee management, and role-based access on a real backend.</p>
@@ -132,8 +142,7 @@ h1{font-size:clamp(3rem,9vw,8.5rem)!important;max-width:13ch!important;line-heig
 <div><h2>Tend</h2><p class="lead">A self-care app focused on gentle daily engagement. Different problem, different interface, same approach: make it simple to use and solid underneath.</p>
 <div class="tags"><b>Flutter</b><b>Dart</b><b>Mobile UI/UX</b></div><a class="btn" href="#/case/tend">Read the case study</a></div></div></section>
 
-<section id="web"><div class="wrap"><h2>Websites and web products</h2><p class="lead">Live sites for businesses across retail, travel, housing and industry. Click any card to open it.</p>
-<div class="grid" id="grid"></div></div></section>
+<section id="web" class="pinsec" style="height:300vh"><div class="stick"><div class="wrap"><h2>Websites and web products</h2><p class="lead">Live sites across retail, travel, housing and industry. Keep scrolling, then click a card to open it.</p></div><div class="film" id="grid"></div></div></section>
 
 <section id="auto"><div class="wrap"><h2>I automate what happens behind the interface.</h2><p class="lead">Ticket routing, escalations, scheduled reports, PDF generation and email distribution, built with Monday.com, Google Apps Script, AppSheet and Python. The aim: make the repetitive invisible.</p>
 <a class="btn" href="#/case/automation" style="margin-top:20px">Read the case study</a><div class="flow" id="flow"><div class="node"><b>Request</b><span>Form, email or ticket</span></div><div class="node"><b>Trigger</b><span>Rule fires</span></div><div class="node"><b>Logic</b><span>Assign, escalate, validate</span></div><div class="node"><b>Action</b><span>Notify, generate PDF</span></div><div class="node"><b>Report</b><span>Dashboard and SLA view</span></div></div></div></section>
@@ -157,8 +166,11 @@ h1{font-size:clamp(3rem,9vw,8.5rem)!important;max-width:13ch!important;line-heig
 <div><h3>Data and cloud</h3><p>PostgreSQL, Supabase, Row Level Security, Railway, Vercel, Git</p></div>
 <div><h3>Automation and AI</h3><p>n8n, Google Apps Script, Monday.com, AppSheet, Looker Studio, AI APIs</p></div>
 <div><h3>Systems</h3><p>Dynamics 365, LAN/WAN/VPN, firewalls, endpoints, backup and recovery, access management</p></div></div>
-<p class="lead" style="margin-top:50px">MSc Artificial Intelligence (ongoing), Open University of Kenya. BSc Information Systems and Technology, USIU-Africa. Diploma in IT, The Co-operative University of Kenya.</p></div></section>
+</div></section>
 
+<section id="about"><div class="wrap"><h2 style="max-width:18ch">I like building things that work.</h2><p class="lead">I'm Joshua Muuo, a software and systems professional in Nairobi working across software engineering, automation, AI and enterprise technology.</p>
+<div class="stack"><div><h3>Software</h3><p>Mobile and web products, APIs and database-driven applications.</p></div><div><h3>Systems</h3><p>Networks, security, endpoints, backups and enterprise platforms.</p></div><div><h3>Automation</h3><p>Workflows, integrations, reporting and AI-assisted operations.</p></div></div>
+<div class="edu"><p><b>MSc Artificial Intelligence</b>Open University of Kenya, ongoing</p><p><b>BSc Information Systems and Technology</b>United States International University, Nairobi</p><p><b>Diploma in Information Technology</b>The Co-operative University of Kenya</p></div></div></section>
 <section id="contact"><div class="wrap"><h2>What should we build?</h2>
 <a class="mail" href="mailto:jmuuo001@gmail.com">jmuuo001@gmail.com</a>
 <div class="links"><a href="https://linkedin.com/in/joshua-muuo" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/Joshua-web-ul" target="_blank" rel="noopener">GitHub</a><span>Nairobi, Kenya</span></div></div></section>
@@ -241,6 +253,19 @@ document.querySelectorAll('#ov').forEach(el=>el.addEventListener('pointerover',e
 const sys=$('#sys'),ch=[...sys.querySelectorAll('[data-k]')],sh=$('#sh'),dbn=$('#dbn'),cap=['A person opens the app.','The app asks the API.','The API checks the database.','The data becomes a product.','That is SyncOps.'];
 function sp(){let k=4;if(!mq){const r=sys.getBoundingClientRect(),p=Math.max(0,Math.min(.999,-r.top/(r.height-innerHeight)));k=Math.floor(p*5)}ch.forEach(e=>e.classList.toggle('on',+e.dataset.k<=k));dbn.classList.toggle('open',k>=4);if(sh.textContent!=cap[k])sh.textContent=cap[k]}
 addEventListener('scroll',sp,{passive:true});sp();
+
+// philosophy: words arrive independently
+const ph=$('#phil'),pa=$('#pa'),pb=$('#pb'),pl=$('#pl'),ez=x=>1-Math.pow(1-Math.max(0,Math.min(1,x)),3);
+[[pa,"I don't just build interfaces."],[pb,'I build the systems behind them.']].forEach(([e,t])=>e.innerHTML=t.split(' ').map(w=>`<span>${w}</span>`).join(' '));
+function pp(){const r=ph.getBoundingClientRect(),p=mq?1:Math.max(0,Math.min(1,-r.top/(r.height-innerHeight)));
+ [[pa,ez(p/.3),p>.5?1-ez((p-.5)/.08):1],[pb,ez((p-.58)/.25),1]].forEach(([e,i,o])=>[...e.children].forEach((w,n)=>{const k=1-i;w.style.transform=`translate(${((n*53)%9-4)*55*k}px,${((n*29)%7-3)*45*k}px)`;w.style.opacity=i*o}));
+ if(mq)pa.style.display='none';pl.style.opacity=ez((p-.88)/.12)}
+// filmstrip
+const web=$('#web'),film=$('#grid');
+function wf(){if(mq)return;const r=web.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/(r.height-innerHeight)));film.style.transform=`translateX(${-p*Math.max(0,film.scrollWidth-innerWidth)}px)`}
+// nav hides on scroll down
+let ly=0;const nv=$('nav');
+addEventListener('scroll',()=>{pp();wf();const y=scrollY;nv.style.transform=y>ly&&y>300?'translateY(-110%)':'';ly=y},{passive:true});pp();wf();addEventListener('resize',wf);
 </script>
 </body>
 </html>
